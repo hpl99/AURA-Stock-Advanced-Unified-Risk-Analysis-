@@ -1,81 +1,107 @@
-# AURA Stock (Advanced Unified Risk Analysis)
+# AURA - Advanced Unified Risk Analysis
 
-![AURA Stock Banner](https://via.placeholder.com/1200x400/0f172a/00e5ff?text=AURA+Stock+-+Advanced+Unified+Risk+Analysis)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![React](https://img.shields.io/badge/frontend-React%2019%20%7C%20Vite-blueviolet.svg)
+![FastAPI](https://img.shields.io/badge/backend-FastAPI%20%7C%20Python-009688.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
 
-## 📌 Overview
+## Executive Summary
 
-AURA (Advanced Unified Risk Analysis) Stock is a high-performance, real-time financial market visualization dashboard. Engineered with **React (Vite)** on the frontend and **FastAPI** on the backend, it utilizes **WebSockets** to deliver sub-second micro-tick market data updates. This provides users with dynamic chart structures, real-time tabular insights, and quantitative metrics for top-tier assets.
+AURA (Advanced Unified Risk Analysis) is an enterprise-grade financial visualization platform engineered to process and display real-time market data with sub-second latency. Utilizing a robust decoupled architecture—combining a Python/FastAPI backend with a high-performance React frontend—the system simulates and ingests continuous algorithmic micro-ticks. AURA delivers unparalleled precision in asset tracking, sophisticated quantitative charting, and instantaneous risk modeling tailored for modern technical analysis.
 
-## 🚀 Key Features
+## Core Capabilities
 
-- **Live-Streaming Market Pulse:** WebSocket-powered low-latency data engine simulating real-world algorithmic micro-ticks.
-- **Advanced Dynamic Charting:** Triple-asset concurrent visualization with seamless sliding-window rendering using Recharts.
-- **Deep Analytics & Indicators:** Real-time statistical derivations including Simple Moving Average (SMA 50), Volatility indices (30-day), and rolling 24h High/Low boundaries.
-- **Algorithmic Recommendations:** Automated, rule-based quantitative risk and trend analysis indicators.
-- **Premium Interactive UI:** State-of-the-art glassmorphism design, neon accents, and optimized micro-animations powered by Framer Motion and Tailwind CSS v4.
-- **Strategy Notes Engine:** LocalStorage-persisted mechanism allowing traders to capture and retain asset-specific quantitative hypotheses.
+- **Real-Time Data Ingestion:** Fully asynchronous WebSocket streaming architecture guarantees sub-second synchronization between the computation backend and client interfaces.
+- **Complex Data Visualization:** Hardware-accelerated, dynamic charting engines support concurrent multi-asset rendering with uncompromised fluidity during sliding-window state updates.
+- **Quantitative Derivations:** Automated, real-time computation of rolling 30-day volatility indices, Simple Moving Averages (SMA-50), and 24-hour high/low support/resistance boundaries.
+- **Algorithmic Risk Assessment:** Pre-configured heuristic models dynamically categorize asset stability, surfacing automated algorithmic recommendations (e.g., High Volatility vs. Stable Trend) instantaneously.
+- **Persistent Strategy Matrix:** An integrated, state-persisted annotation engine enabling technical analysts to formulate and retain quantitative trading hypotheses per asset.
+- **Premium UX/UI Architecture:** A state-of-the-art interface utilizing glassmorphism composite rendering, motion-accelerated micro-animations, and sophisticated dark-mode topography.
 
-## 🛠️ Technology Stack
+## System Architecture
 
-### Frontend
+AURA operates on a strictly decoupled client-server paradigm designed for horizontal scalability and low latency:
 
-- **Framework:** React 19 (Vite)
-- **Styling:** Tailwind CSS v4
-- **Animations:** Framer Motion
-- **Charting:** Recharts
-- **Icons:** Lucide React
-- **Routing:** React Router DOM v7
+- **Backend Engine (FastAPI/Python):**
+  Maintains shared memory structures and generates multi-threaded stochastic data streams simulating realistic market micro-volatility. Broadcasts standardized JSON payloads via secure WebSocket endpoints.
+- **Frontend Platform (React/Vite):**
+  Establishes persistent duplex connections. Utilizes advanced memoization and precise state management to map inbound data streams into DOM updates without main-thread blocking, ensuring 60 FPS animation fidelity.
 
-### Backend
+## Technical Specifications
 
-- **Framework:** FastAPI (Python)
-- **Concurrency:** Asyncio & WebSockets
-- **Server:** Uvicorn
+### Frontend Infrastructure
 
-## 🔧 Getting Started
+- **Application Core:** React 19.x, Vite (HMR Enabled)
+- **Design System:** Tailwind CSS v4, Lucide React (Vector Iconography)
+- **Animation Engine:** Framer Motion
+- **Analytics Component:** Recharts (Composed, Area, and Line paradigms)
+- **Routing:** React Router v7
 
-### Prerequisites
+### Backend Infrastructure
 
-- Node.js (v18+)
-- Python (3.8+)
-
-### Setup Instructions
-
-#### 1. Backend Server Setup
-
-Navigate to the central backend directory and initiate the WebSocket streaming server:
-
-```bash
-cd backend
-# Install required Python packages (it is recommended to use a virtual environment)
-pip install fastapi uvicorn websockets
-# Start the server
-python main.py
-```
-
-_The FastAPI server will boot up and bind to `http://127.0.0.1:8000`._
-
-#### 2. Frontend Client Setup
-
-Open a new terminal window, navigate to the project root, and run the Vite environment:
-
-```bash
-# Install NPM dependencies
-npm install
-
-# Start the Vite development environment
-npm run dev
-```
-
-_The web application will instantly be served, typically at `http://localhost:5173`._
-
-## 💡 Application Usage
-
-- Launch the application to land on the **Market Pulse** overview.
-- Dynamically toggle visibility of AAPL, TSLA, and AMZN pricing feeds on the multi-chart panel via the upper control buttons.
-- Examine the **High-Speed Metrics** table to observe live price flashing, calculated risk models, and trend indications.
-- Navigate into individual asset dashboards (e.g., Apple, Tesla) to observe granular metrics like SMA and Volatility overlays, and securely type and commit personal **Strategy Notes**.
+- **Application Core:** Python 3.8+, FastAPI
+- **Concurrency Model:** `asyncio`, Starlette (WebSockets)
+- **ASGI Server:** Uvicorn
+- **Data Simulation:** Stochastic micro-tick generation over shared memory dicts
 
 ---
 
-_Built for optimal asset tracking and advanced market insight visualization._
+## Deployment & Local Installation
+
+### Prerequisites
+
+- **Node.js** (v18.0.0 or higher)
+- **Python** (v3.8 or higher)
+- **npm** or **yarn** package manager
+
+### 1. Initialization of Backend Services
+
+The backend relies on the high-performance ASGI server Uvicorn to handle concurrent WebSocket connections.
+
+```bash
+# Navigate to the backend service core
+cd backend
+
+# (Optional but recommended) Initialize an isolated Python environment
+python -m venv venv
+source venv/bin/activate  # On Windows environments: venv\Scripts\activate
+
+# Install required backend dependencies
+pip install fastapi uvicorn websockets
+
+# Execute the application server
+python main.py
+```
+
+_The service binds locally to `http://127.0.0.1:8000`, exposing both REST and `ws://` endpoints._
+
+### 2. Initialization of Frontend Client
+
+The frontend leverages Vite for optimized build pipelines and instantaneous Hot Module Replacement.
+
+```bash
+# Return to the project root repository
+# Note: package.json resides in the main repository root
+
+# Install Node modules and dependencies
+npm install
+
+# Launch the frontend development server
+npm run dev
+```
+
+_The client is served locally and is accessible via a standard modern web browser at `http://localhost:5173`._
+
+---
+
+## Operational Guidelines
+
+1. **Market Pulse Dashboard:** Upon entry, the system automatically establishes connections to the generic `ws/market` endpoint, commencing the real-time data pipeline.
+2. **Asset Subscriptions:** Analysts may selectively subscribe or unsubscribe from specific asset feeds (e.g., AAPL, TSLA, AMZN) to manage visual cognitive load via the control bar.
+3. **Deep-Dive Mechanics:** Selecting an application asset routes to a dedicated analytical terminal. Analysts can toggle overlapping complex metrics including volatility gradients and SMAs. The feed scales and updates transparently.
+4. **Strategy Preservation:** Qualitative analyst assessments documented in the 'My Strategy Notes' terminal are secured directly within the browser's persistent `localStorage`.
+
+## Licensing & Proprietary Notice
+
+This software is distributed under the MIT License unless stated otherwise by the publishing organization. All quantitative algorithms simulated within this repository are for visualization and educational demonstrations only.
