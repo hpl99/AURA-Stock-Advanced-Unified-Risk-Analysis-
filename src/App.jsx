@@ -11,7 +11,7 @@ const MainLayout = () => {
   const location = useLocation();
   
   return (
-    <div className="flex min-h-screen bg-[#0a0a0a] text-white selection:bg-neon-cyan/30">
+    <div className="flex min-h-screen bg-[#0f172a] text-white selection:bg-neon-cyan/30">
       <Sidebar />
       <main className="flex-1 p-6 md:p-8 overflow-y-auto h-screen relative scroll-smooth">
         {/* Subtle background glow effect behind content */}
