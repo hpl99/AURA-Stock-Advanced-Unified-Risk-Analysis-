@@ -1,0 +1,187 @@
+﻿
+> dsp-2@0.0.0 build
+> vite build
+
+[36mvite v8.0.3 [32mbuilding client environment for production...[36m[39m
+[2K
+node.exe : Error: Cannot 
+apply unknown utility 
+class `bg-charcoal`. Are 
+you using CSS modules or 
+similar and missing 
+`@reference`? https://tail
+windcss.com/docs/functions
+-and-directives#reference-
+directive
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (E  
+  rror: Cannot a...renc   
+ e-directive:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+    at onInvalidCandidate 
+(C:\Users\edgeo\Desktop\ds
+p-2\node_modules\tailwindc
+ss\dist\lib.js:21:1314)
+    at Ee (C:\Users\edgeo\
+Desktop\dsp-2\node_modules
+\tailwindcss\dist\lib.js:1
+6:37066)
+    at C:\Users\edgeo\Desk
+top\dsp-2\node_modules\tai
+lwindcss\dist\lib.js:21:35
+5
+    at _r (C:\Users\edgeo\
+Desktop\dsp-2\node_modules
+\tailwindcss\dist\lib.js:3
+:1733)
+    at I (C:\Users\edgeo\D
+esktop\dsp-2\node_modules\
+tailwindcss\dist\lib.js:3:
+1377)
+    at Te (C:\Users\edgeo\
+Desktop\dsp-2\node_modules
+\tailwindcss\dist\lib.js:2
+1:172)
+    at mn (C:\Users\edgeo\
+Desktop\dsp-2\node_modules
+\tailwindcss\dist\lib.js:3
+8:294)
+    at async gn (C:\Users\
+edgeo\Desktop\dsp-2\node_m
+odules\tailwindcss\dist\li
+b.js:38:631)
+    at async Xr (C:\Users\
+edgeo\Desktop\dsp-2\node_m
+odules\@tailwindcss\node\d
+ist\index.js:10:3416)
+    at async N (C:\Users\e
+dgeo\Desktop\dsp-2\node_mo
+dules\@tailwindcss\postcss
+\dist\index.js:10:3979)
+transforming...Γ£ô 2288 modules transformed.
+[31mΓ£ù[39m Build 
+failed in 181ms
+[31merror during build:
+[31mBuild failed with 1 
+error:
+
+[plugin vite:css] C:/Users
+/edgeo/Desktop/dsp-2/src/i
+ndex.css:1:0
+CssSyntaxError: [postcss] 
+tailwindcss: C:/Users/edge
+o/Desktop/dsp-2/src/index.
+css:1:1: Cannot apply 
+unknown utility class 
+`bg-charcoal`. Are you 
+using CSS modules or 
+similar and missing 
+`@reference`? https://tail
+windcss.com/docs/functions
+-and-directives#reference-
+directive
+    at Input.error (C:\Use
+rs\edgeo\Desktop\dsp-2\nod
+e_modules\postcss\lib\inpu
+t.js:135:16)
+    at Root.error (C:\User
+s\edgeo\Desktop\dsp-2\node
+_modules\postcss\lib\node.
+js:146:32)
+    at Object.Once (C:\Use
+rs\edgeo\Desktop\dsp-2\nod
+e_modules\@tailwindcss\pos
+tcss\dist\index.js:10:6913
+)
+    at async 
+LazyResult.runAsync (C:\Us
+ers\edgeo\Desktop\dsp-2\no
+de_modules\postcss\lib\laz
+y-result.js:293:11)
+    at async runPostCSS (f
+ile:///C:/Users/edgeo/Desk
+top/dsp-2/node_modules/vit
+e/dist/node/chunks/node.js
+:20945:19)
+    at async 
+compilePostCSS (file:///C:
+/Users/edgeo/Desktop/dsp-2
+/node_modules/vite/dist/no
+de/chunks/node.js:20929:6)
+    at async compileCSS (f
+ile:///C:/Users/edgeo/Desk
+top/dsp-2/node_modules/vit
+e/dist/node/chunks/node.js
+:20859:26)
+    at async TransformPlug
+inContextImpl.handler (fil
+e:///C:/Users/edgeo/Deskto
+p/dsp-2/node_modules/vite/
+dist/node/chunks/node.js:2
+0375:47)
+    at async plugin (file:
+///C:/Users/edgeo/Desktop/
+dsp-2/node_modules/rolldow
+n/dist/shared/bindingify-i
+nput-options-e7ze4hPR.mjs:
+1129:16)
+    at async 
+plugin.<computed> (file://
+/C:/Users/edgeo/Desktop/ds
+p-2/node_modules/rolldown/
+dist/shared/bindingify-inp
+ut-options-e7ze4hPR.mjs:15
+93:12)[31m
+    at aggregateBindingErr
+orsIntoJsError (file:///C:
+/Users/edgeo/Desktop/dsp-2
+/node_modules/rolldown/dis
+t/shared/error-BLhcSyeg.mj
+s:48:18)
+    at 
+unwrapBindingResult (file:
+///C:/Users/edgeo/Desktop/
+dsp-2/node_modules/rolldow
+n/dist/shared/error-BLhcSy
+eg.mjs:18:128)
+    at #build (file:///C:/
+Users/edgeo/Desktop/dsp-2/
+node_modules/rolldown/dist
+/shared/rolldown-build-CPr
+IX9V6.mjs:3313:34)
+    at async 
+buildEnvironment (file:///
+C:/Users/edgeo/Desktop/dsp
+-2/node_modules/vite/dist/
+node/chunks/node.js:32849:
+64)
+    at async Object.build 
+(file:///C:/Users/edgeo/De
+sktop/dsp-2/node_modules/v
+ite/dist/node/chunks/node.
+js:33271:19)
+    at async 
+Object.buildApp (file:///C
+:/Users/edgeo/Desktop/dsp-
+2/node_modules/vite/dist/n
+ode/chunks/node.js:33268:1
+53)
+    at async 
+CAC.<anonymous> (file:///C
+:/Users/edgeo/Desktop/dsp-
+2/node_modules/vite/dist/n
+ode/cli.js:778:3) {
+  errors: [Getter/Setter]
+}[39m
